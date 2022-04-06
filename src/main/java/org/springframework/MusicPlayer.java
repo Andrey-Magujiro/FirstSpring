@@ -6,10 +6,10 @@ import java.util.Random;
 
 public class MusicPlayer {
 
-    private List<Music> musicList = new ArrayList<>();
+    //private List<Music> musicList = new ArrayList<>();
 
     public MusicPlayer(){}
-
+    /*
     public void setMusic(List<Music> list){
         musicList = list;
     }
@@ -26,10 +26,10 @@ public class MusicPlayer {
             }
 
         }
-    }
+    }*/
 
 
-    /*
+
     private Music music;
     private String name;
     private int volume;
@@ -62,5 +62,5 @@ public class MusicPlayer {
     public void playMusic(){
         System.out.println("played song : " + music.getSong()  + "\tVOL = " + volume + "\tPlayer name: " + name);
     }
-       */
+
 }

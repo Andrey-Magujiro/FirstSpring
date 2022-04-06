@@ -10,26 +10,18 @@
     <context:property-placeholder location = "classpath:musicPlayer.properties"/>
 
     <bean id="musicBean"
-          class="org.springframework.ClassicMusic">
+          class="org.springframework.ClassicMusic"
+            init-method = "myInit"
+            destroy-method="myDestruct"
+            factory-method="getFactoryObject"
+            >
     </bean>
 
-    <bean id="musicBeanTwo"
-          class="org.springframework.HipHopMusic">
-    </bean>
-
-    <bean id="musicBeanThree"
-          class="org.springframework.RockMusic">
-    </bean>
-
+    <!--
     <bean id="MusicPlayer"
-          class="org.springframework.MusicPlayer">
-        <property name = "music">
-                <list>
-                    <ref bean = "musicBean" />
-                    <ref bean = "musicBeanTwo" />
-                    <ref bean = "musicBeanThree" />
-                </list>
-        </property>
+          class="org.springframework.MusicPlayer" scope = "prototype">
+            <property name = "music" ref = "musicBean"/>
     </bean>
+    -->
 
 </beans>
