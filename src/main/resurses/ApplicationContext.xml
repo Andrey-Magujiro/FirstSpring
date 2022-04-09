@@ -7,21 +7,6 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location = "classpath:musicPlayer.properties"/>
-
-    <bean id="musicBean"
-          class="org.springframework.ClassicMusic"
-            init-method = "myInit"
-            destroy-method="myDestruct"
-            factory-method="getFactoryObject"
-            >
-    </bean>
-
-    <!--
-    <bean id="MusicPlayer"
-          class="org.springframework.MusicPlayer" scope = "prototype">
-            <property name = "music" ref = "musicBean"/>
-    </bean>
-    -->
+    <context:component-scan base-package="org.springcurse" />
 
 </beans>
